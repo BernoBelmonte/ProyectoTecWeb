@@ -1,0 +1,182 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+<style>
+    h1 {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    .display-4 {
+        font-size: 40px;
+        color: white;
+        display: block;
+        margin-bottom: 40px;
+    }
+
+    body {
+        background-image: url("Visuals/mtbBack.jpg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        filter: opacity(90%);
+        background-position: center;
+    }
+
+    div.container1 {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        gap: 1em;
+        width: 1000px;
+        height: 700px;
+        transition: all 400ms;
+        margin: 0 auto;
+    }
+
+    .box {
+        position: relative;
+        background: var(--img) center center;
+        background-size: cover;
+        transition: all 400ms;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        filter: grayscale(100%) opacity(85%);
+    }
+
+        .box::after {
+            content: attr(data-text);
+            position: absolute;
+            bottom: 20px;
+            background: #000;
+            color: #fff;
+            padding: 10px 10px 10px 14px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            transform: translateY(60px);
+            opacity: 0;
+            transition: all 400ms;
+        }
+
+    .container1:hover .box {
+        filter: grayscale(100%) opacity(24%);
+    }
+
+    .box:hover::after {
+        transform: translateY(0);
+        opacity: 1;
+        transition-delay: 400ms;
+    }
+
+    .container1 .box:hover {
+        filter: grayscale(0%) opacity(100%);
+    }
+
+    .container1:has(.box-1:hover) {
+        grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+    }
+
+    .container1:has(.box-2:hover) {
+        grid-template-columns: 1fr 3fr 1fr 1fr 1fr;
+    }
+
+    .container1:has(.box-3:hover) {
+        grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
+    }
+
+    .container1:has(.box-4:hover) {
+        grid-template-columns: 1fr 1fr 1fr 3fr 1fr;
+    }
+
+    .container1:has(.box-5:hover) {
+        grid-template-columns: 1fr 1fr 1fr 1fr 3fr;
+    }
+
+    .box:nth-child(odd) {
+        transform: translateY(-16px);
+    }
+
+    .box:nth-child(even) {
+        transform: translateY(16px);
+    }
+
+    .bloque {
+        width: 80%;
+        background-color: grey;
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 100px;
+        padding: 10px 10px 10px 10px;
+        width: 5000px;
+        height: 2000px;
+    }
+
+    section {
+        margin-top: 50px;
+        padding: 20px;
+        border-top: 1px solid #ccc;
+        color: white;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    article {
+        margin-bottom: 20px;
+    }
+
+</style>
+
+
+<body>
+    <main>
+        <div class="text-center">
+            <h1 class="display-4">Rodando al futuro</h1>
+        </div>
+        <div class="container1">
+            <div class="box box-1" style="--img: url(http://localhost:5500/Visuals/trekRemedy.jpg);" data-text="Madone"></div>
+            <div class="box box-2" style="--img: url(http://localhost:5500/Visuals/trekRemedy.jpg);" data-text="Madone"></div>
+            <div class="box box-3" style="--img: url(http://localhost:5500/Visuals/trekRemedy.jpg);" data-text="TREK REMEDY 9.7"></div>
+            <div class="box box-4" style="--img: url(http://localhost:5500/Visuals/trekRemedy.jpg);" data-text="Madone"></div>
+            <div class="box box-5" style="--img: url(http://localhost:5500/Visuals/trekRemedy.jpg);" data-text="Madone"></div>
+        </div>
+        <section class="historia">
+            <h2>Historia</h2>
+            <p>
+                La historia de la bicicleta se remonta a principios del siglo XIX. En 1817, el barón alemán Karl von Drais inventó el draisiana, un vehículo de dos ruedas impulsado por los pies. En 1839, el escocés Kirkpatrick Macmillan inventó la primera bicicleta con pedales.
+
+                La bicicleta se popularizó en la década de 1870, gracias a la invención de la rueda maciza de goma. En la década de 1880, se inventó la cadena de transmisión, que permitió que las bicicletas fueran más ligeras y eficientes.
+
+                En la década de 1900, la bicicleta se convirtió en un medio de transporte popular para todo el mundo. En la década de 1970, la bicicleta se convirtió en un símbolo de la cultura del ciclismo urbano.
+
+                **Los primeros modelos de bicicleta eran muy rudimentarios. El draisiana, por ejemplo, no tenía pedales y se propulsaba por los pies. La primera bicicleta con pedales, inventada por Macmillan, era muy pesada y difícil de manejar.**
+
+                **En la década de 1870, se inventó la rueda maciza de goma, que hizo que las bicicletas fueran más cómodas y seguras. En la década de 1880, se inventó la cadena de transmisión, que permitió que las bicicletas fueran más ligeras y eficientes.**
+
+                **En la década de 1900, la bicicleta se convirtió en un medio de transporte popular para todo el mundo. Las bicicletas se utilizaban para ir al trabajo, ir a la escuela y para realizar actividades recreativas.**
+
+                **En la década de 1970, la bicicleta se convirtió en un símbolo de la cultura del ciclismo urbano. El ciclismo urbano se convirtió en una forma popular de transporte y de ejercicio.**
+            </p>
+        </section>
+        <section class="antecedentes">
+            <h2>Antecedentes</h2>
+            <p>
+                La bicicleta es un vehículo de dos ruedas que se propulsa por el movimiento de los pies o de los pedales. La bicicleta es un medio de transporte sostenible y saludable que ofrece una serie de beneficios, como la reducción de la contaminación, la mejora de la salud y el fomento de la actividad física.
+
+                **La bicicleta es un medio de transporte sostenible. No emite gases de efecto invernadero ni contaminantes, lo que la convierte en una opción ecológica para el transporte.**
+
+                **La bicicleta es un medio de transporte saludable. El ciclismo es una forma de ejercicio cardiovascular que puede ayudar a reducir el riesgo de enfermedades cardíacas, derrames cerebrales y diabetes.**
+
+                **La bicicleta es un medio de transporte que fomenta la actividad física. El ciclismo es una forma divertida y fácil de realizar ejercicio.**
+
+                **En España, el ciclismo es un deporte popular que cuenta con una larga tradición. El ciclismo español ha dado a conocer al mundo a algunos de los mejores ciclistas de la historia, como Miguel Indurain, Alberto Contador y Alejandro Valverde.**
+
+                **El ciclismo es un deporte que se puede practicar a cualquier edad y nivel de condición física. El ciclismo es una actividad que puede disfrutar toda la familia.**
+            </p>
+        </section>
+    </main>
+</body>
+
